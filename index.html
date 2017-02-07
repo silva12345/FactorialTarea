@@ -1,0 +1,128 @@
+<!-- esto es un comentario -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> <!-- Para poner todo tipo de asentos-->
+	<title>Mi primera aplicación móvil</title>
+	<!-- Importacion de librerias -->
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css"> <!-- librerias css -->
+	<link rel="stylesheet" type="text/css" href="css/mystilo.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+	<script type="text/javascript">
+
+		$(document).ready(function (){
+			
+			$("#btnSumar").click(function(){
+
+				var n1=parseInt($("#num11").val());
+				var n2=parseInt($("#num22").val());
+				var suma=n1+n2;
+				
+				$("#resul").val(suma);
+				});
+				
+			
+			//alert("hola mundo");
+			$("#btnFactorial").click(function(){
+
+					var n1=parseInt($("#num1").val());
+					var fac=1;
+
+					while (n1!=0){
+
+						fac=fac*n1;
+						n1--;
+					}
+					$("#res").val(fac);
+					
+					//alert("valor de la suma es: "+suma);
+				});
+
+		});
+	</script>
+	<style type="text/css">
+		p{
+			text-align: center;
+		}
+</style>
+</head>
+<body>
+	<div data-role ="page" id="Principal" data-theme="b">
+		<div data-role="header">
+			<p ALIGN=center>PRINCIPAL</p>
+		</div>
+		<div data-role="content">
+			<p ALIGN=left>Contenido de la aplicación</p>
+			<a href="#Contacto" data-role="button" data-transition="slide">Contacto slide</a> <!-- # se utiliza para hacer referencia segido del ID de tipo buton-->
+			<a href="#Contacto" data-role="button" data-transition="slideup">Contacto up</a>
+			<a href="#Contacto" data-role="button" data-transition="slidedown">Contacto down</a>
+			<a href="#Contacto" data-role="button" data-transition="pop">Contacto pop</a>
+			<a href="#Contacto" data-role="button" data-transition="flip">Contacto flip</a>
+			<a href="#Contacto" data-role="button" data-transition="flow">Contacto flow</a>
+			<a href="#Contacto" data-role="button" data-transition="slidefade">Contacto slidefade</a>
+			<a href="#Contacto" data-role="button" data-transition="turn">Contacto turn</a>
+			<a href="#Suma" data-role="button" data-transition="turn">Sumar</a>
+			<a href="#Factorial" data-role="button" data-transition="turn">Factorial</a>
+		</div>
+		<div data-role ="footer">
+		<p>
+			<a href="http://facebook.com" class="ui-btn ui-icon-plus ui-btn-icon-left">Facebook</a>
+			<a href="https://twitter.com" class="ui-btn ui-icon-plus ui-btn-icon-left">Twitter</a>
+			<a href="http://instagram.com" class="ui-btn ui-icon-plus ui-btn-icon-left">Instagram</a>
+			</p>
+		</div>
+	</div>
+	<div data-role ="page" id="Contacto">
+		<div data-role="header">
+		<a href="#Principal" class="ui-btn ui-icon-home ui-btn-icon-left" data-transition="turn">Principal</a>
+			<p >CONTACTO</p>
+			<a href="#Suma" class="ui-btn ui-icon-plus ui-btn-icon-right" data-transition="flow">Suma</a>
+		</div>
+		<div data-role="content">
+			<p>César Silva Hernández</p>
+			<p>DiMariacl.19@gmail.com</p>
+		</div>
+		<div data-role ="footer">
+			<p >Pie de la palicación</p>
+		</div>
+	</div>
+
+	<div data-role ="page" id="Factorial">
+		<div data-role="header">
+			<p >Operación Factorial</p>
+		</div>
+		<div data-role="content">
+			<input type="text" id ="num1" placeholder="Escriba un número">
+			<input type="text" id ="res" placeholder="Resultado">
+			
+			<input type="button" id="btnFactorial" value="Calcular Factorial">
+		</div>
+		<div data-role ="footer">
+			<p >Pie de la palicación</p>
+		</div>
+	</div>
+
+	<div data-role ="page" id="Suma">
+		<div data-role="header">
+			<p >Operación suma</p>
+		</div>
+		<div data-role="content">
+			<input type="text" id ="num11" placeholder="Escriba un número">
+			<input type="text" id ="num22" placeholder="Escriba un número">
+			<input type="text" id ="resul" placeholder="Resultado">
+			<input type="button" id="btnSumar" value="Calcular suma">
+			
+		</div>
+		<div data-role ="footer">
+			
+			<a href="http://facebook.com" class="ui-btn ui-icon-plus ui-btn-icon-left">Facebook</a>
+			<a href="https://twitter.com" class="ui-btn ui-icon-plus ui-btn-icon-left">Twitter</a>
+			<a href="http://instagram.com" class="ui-btn ui-icon-plus ui-btn-icon-left">Instagram</a>
+			 
+		</div>
+	</div>
+
+</body>
+</html>
